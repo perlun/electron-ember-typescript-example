@@ -1,11 +1,7 @@
-/* jshint node: true */
-'use strict';
+'use strict'
 
-const electron         = require('electron');
-const app              = electron.app;
-const BrowserWindow    = electron.BrowserWindow;
+import { app, BrowserWindow, Menu } from 'electron';
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
-const Menu             = electron.Menu;
 
 let mainWindow = null;
 
@@ -45,23 +41,22 @@ app.on('ready', function onReady() {
     if (process.platform == 'darwin') {
         var name = require('electron').app.getName();
         menuTemplate.unshift({
-          label: name,
-          submenu: [
-            {
-              label: 'About ' + name,
-              role: 'about'
-            },
-            {
-              type: 'separator'
-            },
-            {
-              label: 'Quit',
-              accelerator: 'Command+Q',
-              click: function() { app.quit(); }
-            },
-          ]
+            label: name,
+            submenu: [{
+                    label: 'About ' + name,
+                    role: 'about'
+                },
+                {
+                    type: 'separator'
+                },
+                {
+                    label: 'Quit',
+                    accelerator: 'Command+Q',
+                    click: function() { app.quit(); }
+                },
+            ]
         });
-      }
+    }
 
     var menu = Menu.buildFromTemplate(menuTemplate);
     Menu.setApplicationMenu(menu);
