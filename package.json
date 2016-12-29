@@ -1,7 +1,7 @@
 {
-  "name": "web-app",
-  "version": "0.0.0",
-  "description": "Small description for web-app goes here",
+  "name": "electron-ember-typescript-example",
+  "version": "0.1.0",
+  "description": "Small example for how to use Electron with Ember CLI",
   "private": true,
   "directories": {
     "doc": "doc",
