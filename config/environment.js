@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
     var ENV = {
-        modulePrefix: 'web-app',
-        podModulePrefix: 'web-app/pods',
+        modulePrefix: 'electron-ember-typescript-example',
+        podModulePrefix: 'electron-ember-typescript-example/pods',
         environment: environment,
         baseURL: '/',
         locationType: 'hash',
